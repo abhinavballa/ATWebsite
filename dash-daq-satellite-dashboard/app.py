@@ -4,8 +4,8 @@ import os
 
 import pandas as pd
 import dash
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import dcc
+from dash import html
 from dash.dependencies import State, Input, Output
 import dash_daq as daq
 
@@ -19,7 +19,7 @@ app = dash.Dash(
 # This is for gunicorn
 server = app.server
 
-# Mapbox
+# MapboxSa
 MAPBOX_ACCESS_TOKEN = "pk.eyJ1IjoicGxvdGx5bWFwYm94IiwiYSI6ImNrOWJqb2F4djBnMjEzbG50amg0dnJieG4ifQ.Zme1-Uzoi75IaFbieBDl3A"
 MAPBOX_STYLE = "mapbox://styles/plotlymapbox/cjyivwt3i014a1dpejm5r7dwr"
 
