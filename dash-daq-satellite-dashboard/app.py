@@ -82,9 +82,9 @@ temperature = html.Div(
             id="control-panel-temperature-component",
             label="Temperature",
             min=0,
-            max=500,
-            value=290,
-            units="Kelvin",
+            max=100,
+            value=73,
+            units="Fahrenheit ",
             showCurrentValue=True,
             color="#303030",
         )
@@ -239,8 +239,8 @@ minute_toggle = daq.ToggleSwitch(
 satellite_dropdown = dcc.Dropdown(
     id="satellite-dropdown-component",
     options=[
-        {"label": "H45-K1", "value": "h45-k1"},
-        {"label": "L12-5", "value": "l12-5"},
+        {"label": "Temperature and Humidity", "value": "Temperature and Humidity"},
+        {"label": "Pressure", "value": "Pressure"},
     ],
     clearable=False,
     value="h45-k1",
@@ -806,9 +806,9 @@ def update_graph(
     [Input("satellite-dropdown-component", "value")],
 )
 def update_satellite_name(val):
-    if val == "h45-k1":
+    if val == "Temperature and Humidity":
         return "Satellite\nH45-K1"
-    elif val == "l12-5":
+    elif val == "Pressure":
         return "Satellite\nL12-5"
     else:
         return ""
@@ -819,29 +819,17 @@ def update_satellite_name(val):
     [Input("satellite-dropdown-component", "value")],
 )
 def update_satellite_description(val):
-    text = "Select a satellite to view using the dropdown above."
+    text = "Select a sensor to view using the dropdown above."
 
-    if val == "h45-k1":
+    if val == "Temperature and Humidity":
         text = (
-            "H45-K1, also known as GPS IIR-9 and GPS SVN-45, is an American navigation satellite which forms part "
-            "of the Global Positioning System. It was the ninth Block IIR GPS satellite to be launched, out of "
-            "thirteen in the original configuration, and twenty one overall. It was built by Lockheed Martin, using "
-            "the AS-4000 satellite bus. -168 was launched at 22:09:01 UTC on 31 March 2003, atop a Delta II carrier "
-            "rocket, flight number D297, flying in the 7925-9.5 configuration. The launch took place from Space "
-            "Launch Complex 17A at the Cape Canaveral Air Force Station, and placed H45-K1 into a transfer orbit. "
-            "The satellite raised itself into medium Earth orbit using a Star-37FM apogee motor."
+           " This is a place holder for information about our temperature and humidity sensor."
+           
         )
 
-    elif val == "l12-5":
+    elif val == "Pressure":
         text = (
-            "L12-5, also known as NRO Launch 22 or NROL-22, is an American signals intelligence satellite, "
-            "operated by the National Reconnaissance Office. Launched in 2006, it has been identified as the first "
-            "in a new series of satellites which are replacing the earlier Trumpet spacecraft. L12-5 was launched "
-            "by Boeing, using a Delta IV carrier rocket flying in the Medium+(4,2) configuration. The rocket was the "
-            "first Delta IV to launch from Vandenberg Air Force Base, flying from Space Launch Complex 6, a launch "
-            "pad originally constructed as part of abandoned plans for manned launches from Vandenberg, originally "
-            "using Titan rockets, and later Space Shuttles. The launch also marked the first launch of an Evolved "
-            "Expendable Launch Vehicle from Vandenberg, and the first launch of an NRO payload on an EELV."
+            "This is a placeholder for our information about the pressure sensor."
         )
     return text
 

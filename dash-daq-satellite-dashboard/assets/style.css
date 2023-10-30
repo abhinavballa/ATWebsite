@@ -200,7 +200,7 @@ body {
 /**********************************************************************************************************************/
 
 #world-map-wrapper {
-    height: 50rem;
+    height: 0rem;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -208,8 +208,8 @@ body {
 }
 
 #world-map {
-    height: 100%;
-    width: 100%;
+    height: 0%;
+    width: 0%;
 }
 
 #control-panel-toggle-map {
@@ -225,8 +225,8 @@ body {
 }
 
 .sc-ifAKCX.dlqMgb, .sc-ifAKCX.dlqMgb:hover, .sc-ifAKCX.igrnnx, .sc-ifAKCX.igrnnx:hover {
-    background-color: #fec036;
-    border-color: #fec036;
+    background-color: #6c0a0a;
+    border-color: #c89118;
     height: 20px;
     width: 20px;
     cursor: pointer;
@@ -244,7 +244,7 @@ body {
     }
 
     .sc-ifAKCX.dlqMgb, .sc-ifAKCX.dlqMgb:hover, .sc-ifAKCX.igrnnx, .sc-ifAKCX.igrnnx:hover {
-        background-color: #fec036;
+        background-color: #6f0303;
         border-color: #fec036;
         height: 20px;
         width: 20px;
@@ -266,7 +266,7 @@ body {
     }
 
     .sc-ifAKCX.dlqMgb, .sc-ifAKCX.dlqMgb:hover, .sc-ifAKCX.igrnnx, .sc-ifAKCX.igrnnx:hover {
-        background-color: #fec036;
+        background-color: #fe3636;
         border-color: #fec036;
         height: 15px;
         width: 15px;
